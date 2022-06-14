@@ -44,3 +44,6 @@ In order for the guestbook to write entries to the Cloudant database and subsequ
 
 ### Step 3: Create actions to retrieve guestbook entries
 In this step, you need to create a sequence that again consists of two actions, but this sequence will be used to retrieve guestbook entries stored in the Cloudant database. This sequence will list all documents from the database, format the documents, and return them.
+
+
+### Step 4: Create an API
