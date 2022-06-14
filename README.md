@@ -35,5 +35,10 @@ Switch back to the browser tab with the service dashboard page. Go to Service cr
 Click New Credential.
 
 Set the name for-guestbook, and leave the role as Manager. Click Add to add the new credential.
-
 Expand the newly created credentials and review them. These credentials will allow Cloud Functions actions to read/write to your Cloudant service.
+
+
+### Step 2: Create actions to save guestbook entries
+In order for the guestbook to write entries to the Cloudant database and subsequently read entries from the database, you will use Cloud Functions. In this section, you need to create actions with IBM Cloud Functions to write the guestbook entries to Cloudant. A sequence of two actions will be used to create the entries in Cloudant. Given a name, email address, and comment, the sequence will create a document to be persisted and store that document in your Cloudant database.
+
+
