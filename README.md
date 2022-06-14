@@ -47,3 +47,12 @@ In this step, you need to create a sequence that again consists of two actions, 
 
 
 ### Step 4: Create an API
+In order for these functions to be utilized by the guestbook UI, we need to create an API. In this step, you will expose enable your sequences as web actions and create an API that responds to PUT and GET requests.
+
+For each sequence that you created, enable that sequence as a web action.
+
+Create an API called guestbook, with base path /guestbook.
+
+Create two operations for this API. Both operations will use the path /entries. One should be for GET requests and should invoke the read-guestbook-entries-sequence sequence. The other should be for PUT requests and should invoke the save-guestbook-entry-sequence sequence. Use JSON for the response content type.
+
+Make note of the route for this API, as your web application will need it.
