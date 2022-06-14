@@ -9,3 +9,8 @@
 3)Host a static website using object storage
 
 4)Deploy the static website as a microservice on Red Hat OpenShift
+
+
+##OBJECT STORAGE HOSTING ARCHITECTURE
+
+![]()
