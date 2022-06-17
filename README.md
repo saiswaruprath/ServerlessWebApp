@@ -68,3 +68,20 @@ OpenShift will now create a build to build your repository into a container imag
 Click on the deployment that was just created. The outer circle is the application, so click the inner circle with the OpenShift logo.
 
 You should now see a pod, a build, a route. Once the build completes, the pod should stop crashing and should start running. At that point, click the route to view your web app.
+
+
+
+### Step 6: Deploy the web app using Object Storage
+This method of deploying the web app will provide us with an entirely serverless solution: a cloud-managed Cloudant database to persist the guestbook entries, IBM Cloud Functions to save and retrieve entries from the database, and a static site hosted in Object Storage.
+Create an instance of IBM Cloud Object Storage. Make sure to select the Lite plan. Click Create a bucket.
+Click the arrow to Customize your bucket.Enter a bucket name that is unique is across all IBM accounts. 
+
+Select Regional resiliency and Smart Tier storage class. Scroll down to the Static website hosting and click Add rule.
+Keep the Routing rules (individual) selected and add the Index document index.html.
+Click Public access to On. Click Save.
+
+Scroll to the bottom and click Create bucket.Now you need to add your files to this bucket. From the main page of your repository in GitHub, download a zip file by clicking Code then Download ZIP. Unzip the file and navigate to the guestbook.js and index.html files.
+Open the bucket Objects view and drag and drop the guestbook.js and index.html files to the COS bucket.
+Navigate to the Configuration tab for the bucket and scroll down to the Static website hosting endpoints section to copy the Public endpoint into a browser tab.
+
+
