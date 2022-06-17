@@ -1,3 +1,5 @@
+## code for first action to verify parameters and return json string with document that contains details.
+
 function main(params) {
   if (!params.name || !params.comment) {
     return Promise.reject({ error: 'no name or comment'});
