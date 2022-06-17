@@ -84,4 +84,4 @@ Scroll to the bottom and click Create bucket.Now you need to add your files to t
 Open the bucket Objects view and drag and drop the guestbook.js and index.html files to the COS bucket.
 Navigate to the Configuration tab for the bucket and scroll down to the Static website hosting endpoints section to copy the Public endpoint into a browser tab.
 
-![]()
+![](https://github.com/saiswaruprath/ServerlessWebApp/blob/main/Screen%20Shot%202022-06-14%20at%2012.35.53%20AM.png)
