@@ -20,11 +20,6 @@
 The guestbook entries will be stored in a Cloudant database for persistence. IBM Cloudant is a fully managed JSON document database built upon and compatible with Apache CouchDB.
 
 Go to the IBM Cloud catalog and create an instance of Cloudant.
-Keep in mind the following things when creating your instance:
-
-The environment should be multitenant
-The authentication method should be IAM and legacy credentials
-Once the Cloudant instance is provisioned (the status is Active), click on it to go to the service instance page.
 
 Click on Launch Dashboard to open the dashboard in a new browser tab.
 
@@ -36,6 +31,8 @@ Click New Credential.
 
 Set the name for-guestbook, and leave the role as Manager. Click Add to add the new credential.
 Expand the newly created credentials and review them. These credentials will allow Cloud Functions actions to read/write to your Cloudant service.
+
+![]()
 
 
 ### Step 2: Create actions to save guestbook entries
