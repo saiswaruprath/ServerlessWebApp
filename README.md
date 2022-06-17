@@ -32,7 +32,7 @@ Click New Credential.
 Set the name for-guestbook, and leave the role as Manager. Click Add to add the new credential.
 Expand the newly created credentials and review them. These credentials will allow Cloud Functions actions to read/write to your Cloudant service.
 
-![]()
+![](https://github.com/saiswaruprath/ServerlessWebApp/blob/main/Screen%20Shot%202022-06-14%20at%2012.19.20%20AM.png)
 
 
 ### Step 2: Create actions to save guestbook entries
