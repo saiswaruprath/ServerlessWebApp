@@ -1,7 +1,7 @@
 /**
  * Web application
  */
-const apiUrl = 'https://d5bc6b6f.us-south.apigw.appdomain.cloud/guestbook';    ##api from ibm cloud function service 
+const apiUrl = 'https://d5bc6b6f.us-south.apigw.appdomain.cloud/guestbook';    /**api from ibm cloud function service */
 const guestbook = {
   // retrieve the existing guestbook entries
   get() {
