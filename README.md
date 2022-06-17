@@ -45,11 +45,26 @@ In this step, you need to create a sequence that again consists of two actions, 
 
 ### Step 4: Create an API
 In order for these functions to be utilized by the guestbook UI, we need to create an API. In this step, you will expose enable your sequences as web actions and create an API that responds to PUT and GET requests.
-
 For each sequence that you created, enable that sequence as a web action.
-
 Create an API called guestbook, with base path /guestbook.
 
 Create two operations for this API. Both operations will use the path /entries. One should be for GET requests and should invoke the read-guestbook-entries-sequence sequence. The other should be for PUT requests and should invoke the save-guestbook-entry-sequence sequence. Use JSON for the response content type.
 
-Make note of the route for this API, as your web application will need it.
+
+### Step 5: Deploy the web app using OpenShift
+
+Fork the guestbook repository where we mainatined code for the front end web application.
+
+View the guestbook.js file. Notice that the apiUrl constant is blank. In the quotes, put the route to your API, which you should have noted in the last step. Commit this change to your repository. If you're not familiar with GitHub, there is a pencil button the edit the file, and you after making your change you can leave the default commit message and click Commit changes.
+Click OpenShift Console at the top of this environment. This will launch the OpenShift console in a new tab.
+
+Change to the Developer perspective.
+Click the +Add button to add a new application.
+Choose From Git so that you can deploy your web app directly from your forked GitHub repository.
+Paste your GitHub repo URL in the box.
+
+Choose the Httpd builder image. This will build your web app as an Apache web server that serves static content. This is perfect since the web app consists of two simple files: an HTML file and a JavaScript file. Click Create.
+OpenShift will now create a build to build your repository into a container image to run on OpenShift.
+Click on the deployment that was just created. The outer circle is the application, so click the inner circle with the OpenShift logo.
+
+You should now see a pod, a build, a route. Once the build completes, the pod should stop crashing and should start running. At that point, click the route to view your web app.
